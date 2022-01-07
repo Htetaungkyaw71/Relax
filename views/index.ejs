@@ -1,0 +1,32 @@
+<%- include("partials/header.ejs")  %> 
+
+
+
+    <div class="row c">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 p-5 " >
+            <h1 class="text-center">Relax</h1>
+            <p class="text-center">
+                You can listen songs by searching songs title or artists
+            </p>
+            <form action="/" method="post"  >
+               
+                <div class="form-group row text-center">       
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control mt-2" name="title" placeholder="songs title or artists" required >
+                  </div>
+                  <div class="col-sm-2">
+                    <input class="btn btn-dark mt-2" type="submit" value="Search" >
+                  </div>
+               
+                </div>
+                          
+            </form>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+
+
+
+<%- include("partials/footer.ejs")  %> 
+ 

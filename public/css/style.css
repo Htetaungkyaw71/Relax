@@ -1,0 +1,38 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+.c{
+    padding-top: 50px;
+    height: 70vh;
+    background-image: url("bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px;
+}
+.navbar{
+    background-color: transparent;
+}
+.navbar-brand{
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+    margin-left: 50px;
+}
+.navbar-brand:hover{
+    border-bottom: 2.5px solid black;
+    color: black;
+}
+
+.nav-link{
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+    margin-right: 50px;
+} 
+.nav-link:hover{
+    border-bottom: 2.5px solid black;
+    color: black;
+}
