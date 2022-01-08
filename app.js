@@ -6,6 +6,7 @@ const _ = require("lodash");
 app.set("view engine","ejs")
 app.use(body_parser.urlencoded({extended:true}))
 app.use(express.static("public"))
+require('dotenv').config()
 
 
 app.get("/",(req,res)=>{
@@ -24,7 +25,7 @@ app.post("/",(req,res)=>{
 		"path": uri,
 		"headers": {
 			"x-rapidapi-host": "shazam.p.rapidapi.com",
-			"x-rapidapi-key": "1e09d93c71msh6f4e8142d55edcep13429ajsnbec6ef11dd95",
+			"x-rapidapi-key": process.env.SECRET_KEY,
 			"useQueryString": true
 		}
 	};
@@ -41,6 +42,7 @@ app.post("/",(req,res)=>{
 			const body = Buffer.concat(chunks);
 			const result = JSON.parse(body);
 			let songs = result.tracks.hits;
+			console.log([songs[0].track.hub.actions])
 			res.render("songs",{
 				songs:songs
 			})
